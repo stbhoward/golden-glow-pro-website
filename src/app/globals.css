@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: #fbfaf7;
+  --foreground: #11100e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: #e7d19a;
+  color: #11100e;
+}
+
+.luxury-surface {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(243, 238, 230, 0.84)),
+    #fbfaf7;
+}
+
+.gold-line {
+  background: linear-gradient(90deg, transparent, #c5a354, transparent);
+}
