@@ -10,25 +10,35 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#11100e",
-        ivory: "#fbfaf7",
-        pearl: "#f3eee6",
-        champagne: "#c5a354",
-        "soft-gold": "#e7d19a"
+        ink: "#14110d",
+        ivory: "#f8f4ed",
+        pearl: "#eee6da",
+        champagne: "#b89048",
+        bronze: "#7a5b2f",
+        porcelain: "#fffdf8",
+        "soft-gold": "#ddc184"
       },
       fontFamily: {
         sans: [
-          "Inter",
           "Avenir Next",
+          "Inter",
           "Segoe UI",
           "Helvetica Neue",
           "Arial",
           "sans-serif"
         ],
-        serif: ["Cormorant Garamond", "Georgia", "Times New Roman", "serif"]
+        serif: [
+          "Avenir Next",
+          "Inter",
+          "Segoe UI",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif"
+        ]
       },
       boxShadow: {
-        glow: "0 24px 80px rgba(17, 16, 14, 0.12)"
+        glow: "0 28px 90px rgba(20, 17, 13, 0.16)",
+        soft: "0 18px 48px rgba(20, 17, 13, 0.08)"
       }
     }
   },

@@ -46,4 +46,5 @@ pnpm build
 ## Environment
 
 Copy `.env.example` to `.env.local` and fill in real values when the accounts
-exist. Do not commit real Supabase, Stripe, or Cal.com secrets.
+exist. The production site URL is `https://goldenglowpro.com`. Do not commit
+real Supabase, Stripe, or Cal.com secrets.

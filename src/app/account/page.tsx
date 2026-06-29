@@ -61,12 +61,12 @@ export default function AccountPage() {
           {accountSections.map((section) => {
             const Icon = section.icon;
             return (
-              <article className="rounded-lg border border-ink/10 bg-white p-6 shadow-sm" key={section.title}>
+              <article className="border-t border-ink/10 py-6" key={section.title}>
                 <div className="flex items-center gap-3">
                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-ink text-soft-gold">
                     <Icon aria-hidden className="h-5 w-5" />
                   </span>
-                  <h2 className="font-serif text-2xl tracking-normal text-ink">{section.title}</h2>
+                  <h2 className="text-2xl font-semibold text-ink">{section.title}</h2>
                 </div>
                 <div className="mt-5">
                   <CheckList items={section.items} />

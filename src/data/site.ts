@@ -3,6 +3,7 @@ import type { BookingStep, NavItem } from "./types";
 export const siteConfig = {
   companyName: "Golden Glow Pro",
   legalName: "Golden Glow Cleaning Services",
+  siteUrl: "https://goldenglowpro.com",
   phone: "(414) 316-6567",
   email: "inquiries@goldenglowpro.com",
   hours: "Mon-Sat: 7AM - 7PM",

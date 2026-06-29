@@ -39,14 +39,12 @@ export default function AboutPage() {
             finished result that feels calm, refreshed, and intentionally maintained.
           </p>
         </div>
-        <div className="rounded-lg border border-ink/10 bg-white p-8 shadow-sm">
+        <div className="border-l border-ink/10 pl-8">
           <ShieldCheck aria-hidden className="h-7 w-7 text-champagne" />
-          <div className="mt-5 text-xs font-semibold uppercase tracking-[0.22em] text-champagne">
-            Brand positioning
-          </div>
-          <div className="mt-5 grid gap-4">
+          <div className="mt-5 text-sm font-semibold text-bronze">Brand positioning</div>
+          <div className="mt-5 border-t border-ink/10">
             {brandPillars.map((item) => (
-              <div className="rounded-lg bg-ivory px-5 py-4 text-neutral-700 ring-1 ring-ink/10" key={item}>
+              <div className="border-b border-ink/10 py-5 text-neutral-700" key={item}>
                 {item}
               </div>
             ))}

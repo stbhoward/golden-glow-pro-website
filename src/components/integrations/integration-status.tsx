@@ -12,12 +12,12 @@ export function IntegrationStatus({ keys }: { keys?: IntegrationKey[] }) {
   const selected = keys ?? (Object.keys(integrationConfig) as IntegrationKey[]);
 
   return (
-    <div className="grid gap-4 md:grid-cols-3">
+    <div className="grid gap-8 border-t border-ink/10 md:grid-cols-3">
       {selected.map((key) => {
         const item = integrationConfig[key];
         const Icon = icons[key];
         return (
-          <article className="rounded-lg border border-ink/10 bg-white p-5 shadow-sm" key={key}>
+          <article className="py-6" key={key}>
             <div className="flex items-center gap-3">
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-ink text-white">
                 <Icon aria-hidden className="h-5 w-5" />
@@ -37,7 +37,7 @@ export function IntegrationStatus({ keys }: { keys?: IntegrationKey[] }) {
           </article>
         );
       })}
-      <article className="rounded-lg border border-dashed border-champagne/60 bg-soft-gold/10 p-5">
+      <article className="border-t border-champagne/50 py-6 md:border-t-0">
         <div className="flex items-center gap-3">
           <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-champagne text-ink">
             <PlugZap aria-hidden className="h-5 w-5" />

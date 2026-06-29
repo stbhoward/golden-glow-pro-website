@@ -6,9 +6,9 @@ import { topServices } from "@/data/services";
 export function SiteFooter() {
   return (
     <footer className="bg-ink text-neutral-300">
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.2fr_0.8fr_0.8fr_0.9fr]">
         <div>
-          <div className="font-serif text-3xl tracking-normal text-white">{siteConfig.companyName}</div>
+          <div className="text-4xl font-semibold text-white">{siteConfig.companyName}</div>
           <div className="text-sm text-neutral-500">by {siteConfig.legalName}</div>
           <p className="mt-4 leading-7 text-neutral-400">
             Premium residential and specialty cleaning for Houston homes, luxury

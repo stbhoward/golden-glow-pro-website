@@ -16,8 +16,8 @@ type ButtonLinkProps = {
 
 const variants = {
   dark: "bg-ink text-white hover:bg-black",
-  light: "bg-white text-ink hover:bg-pearl",
-  outline: "border border-ink/15 bg-white/80 text-ink hover:bg-white",
+  light: "bg-porcelain text-ink hover:bg-white",
+  outline: "border border-ink/20 bg-transparent text-ink hover:bg-porcelain",
   gold: "bg-champagne text-ink hover:bg-soft-gold"
 };
 

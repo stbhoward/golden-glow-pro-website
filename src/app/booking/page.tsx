@@ -56,16 +56,16 @@ export default function BookingPage() {
         />
         <div className="mt-10 grid gap-5 lg:grid-cols-7">
           {bookingFlow.map((step, index) => (
-            <article className="rounded-lg border border-ink/10 bg-white p-5 shadow-sm" key={step.title}>
+            <article className="border-t border-ink/10 py-5" key={step.title}>
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-ink text-sm font-bold text-soft-gold">
                 {index + 1}
               </div>
-              <h2 className="mt-5 font-serif text-2xl leading-tight tracking-normal text-ink">
+              <h2 className="mt-5 text-2xl font-semibold leading-tight text-ink">
                 {step.title}
               </h2>
               <p className="mt-3 text-sm leading-6 text-neutral-600">{step.body}</p>
               {step.integration ? (
-                <div className="mt-4 inline-flex rounded-full bg-soft-gold/30 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-ink">
+                <div className="mt-4 inline-flex bg-soft-gold/30 px-3 py-1 text-xs font-semibold text-ink">
                   {step.integration}
                 </div>
               ) : null}
@@ -83,10 +83,10 @@ export default function BookingPage() {
           />
           <div className="grid gap-4">
             {serviceCards.map((service) => (
-              <div className="rounded-lg bg-ivory p-5 ring-1 ring-ink/10" key={service.id}>
+              <div className="border-t border-ink/10 py-5" key={service.id}>
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <div>
-                    <h2 className="font-serif text-2xl tracking-normal text-ink">{service.title}</h2>
+                    <h2 className="text-2xl font-semibold text-ink">{service.title}</h2>
                     <p className="mt-1 text-sm text-neutral-600">{service.price}</p>
                   </div>
                   <ButtonLink href="/sign-up" icon={ShieldCheck} variant="outline">
@@ -114,12 +114,12 @@ export default function BookingPage() {
           {collectionGroups.map((group) => {
             const Icon = group.icon;
             return (
-              <article className="rounded-lg border border-ink/10 bg-white p-6 shadow-sm" key={group.title}>
+              <article className="border-t border-ink/10 py-6" key={group.title}>
                 <div className="flex items-center gap-3">
                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-ink text-soft-gold">
                     <Icon aria-hidden className="h-5 w-5" />
                   </span>
-                  <h2 className="font-serif text-2xl tracking-normal text-ink">{group.title}</h2>
+                  <h2 className="text-2xl font-semibold text-ink">{group.title}</h2>
                 </div>
                 <div className="mt-5">
                   <CheckList items={group.items} />

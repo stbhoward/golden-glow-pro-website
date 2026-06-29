@@ -4,8 +4,8 @@
 
 :root {
   color-scheme: light;
-  --background: #fbfaf7;
-  --foreground: #11100e;
+  --background: #f8f4ed;
+  --foreground: #14110d;
 }
 
 * {
@@ -18,8 +18,11 @@ html {
 
 body {
   min-height: 100vh;
-  background: var(--background);
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.92), rgba(248, 244, 237, 1) 42rem),
+    var(--background);
   color: var(--foreground);
+  text-rendering: geometricPrecision;
 }
 
 ::selection {
@@ -29,10 +32,19 @@ body {
 
 .luxury-surface {
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(243, 238, 230, 0.84)),
-    #fbfaf7;
+    linear-gradient(135deg, rgba(255, 253, 248, 0.96), rgba(238, 230, 218, 0.72)),
+    #f8f4ed;
 }
 
 .gold-line {
-  background: linear-gradient(90deg, transparent, #c5a354, transparent);
+  background: linear-gradient(90deg, transparent, #b89048, transparent);
+}
+
+.section-rule {
+  border-top: 1px solid rgba(20, 17, 13, 0.1);
+}
+
+.display-text {
+  font-family: Avenir Next, Inter, Segoe UI, Helvetica Neue, Arial, sans-serif;
+  letter-spacing: 0;
 }

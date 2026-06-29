@@ -29,9 +29,9 @@ export default function SignInPage() {
           eyebrow="Supabase Auth placeholder"
           title="No live authentication logic yet"
         />
-        <div className="rounded-lg border border-ink/10 bg-white p-8 shadow-sm">
+        <div className="border-l border-ink/10 pl-8">
           <ShieldCheck aria-hidden className="h-7 w-7 text-champagne" />
-          <h2 className="mt-5 font-serif text-3xl tracking-normal text-ink">
+          <h2 className="mt-5 text-3xl font-semibold text-ink">
             Auth boundary ready
           </h2>
           <p className="mt-4 leading-7 text-neutral-700">

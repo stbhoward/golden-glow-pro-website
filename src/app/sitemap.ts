@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+import { siteConfig } from "@/data/site";
+
 const routes = [
   "",
   "/services",
@@ -14,7 +16,7 @@ const routes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://goldenglowpro.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? siteConfig.siteUrl;
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,

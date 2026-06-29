@@ -40,9 +40,9 @@ export default function SignUpPage() {
           eyebrow="Account setup"
           title="Prepared fields for the future Supabase profile"
         />
-        <div className="rounded-lg border border-ink/10 bg-white p-8 shadow-sm">
+        <div className="border-l border-ink/10 pl-8">
           <UserPlus aria-hidden className="h-7 w-7 text-champagne" />
-          <h2 className="mt-5 font-serif text-3xl tracking-normal text-ink">
+          <h2 className="mt-5 text-3xl font-semibold text-ink">
             Customer profile data
           </h2>
           <div className="mt-6">

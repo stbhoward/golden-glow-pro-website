@@ -17,10 +17,8 @@ export function SectionIntro({
 }: SectionIntroProps) {
   return (
     <div className={cn("max-w-3xl", align === "center" && "mx-auto text-center", className)}>
-      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-champagne">
-        {eyebrow}
-      </p>
-      <h2 className="mt-3 font-serif text-4xl leading-tight tracking-normal text-ink md:text-5xl">
+      <p className="text-sm font-semibold text-bronze">{eyebrow}</p>
+      <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">
         {title}
       </h2>
       <p className="mt-5 text-base leading-8 text-neutral-700 md:text-lg">{body}</p>

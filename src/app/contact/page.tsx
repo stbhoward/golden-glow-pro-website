@@ -46,15 +46,15 @@ export default function ContactPage() {
               "Membership can be positioned as an upgrade path during booking",
               "Service details and pricing ranges support the booking decision"
             ].map((item) => (
-              <div className="rounded-lg border border-ink/10 bg-white px-5 py-4 text-neutral-700 shadow-sm" key={item}>
+              <div className="border-t border-ink/10 py-4 text-neutral-700" key={item}>
                 {item}
               </div>
             ))}
           </div>
         </div>
-        <aside className="rounded-lg border border-ink/10 bg-white p-8 shadow-sm">
-          <h2 className="font-serif text-3xl tracking-normal text-ink">Booking panel</h2>
-          <p className="mt-4 leading-7 text-neutral-700">
+        <aside className="bg-ink p-8 text-white shadow-soft">
+          <h2 className="text-3xl font-semibold text-white">Booking panel</h2>
+          <p className="mt-4 leading-7 text-white/70">
             Use the booking route for the first structured conversion path. Real
             calendar and deposit actions will be connected after the business has
             Cal.com and Stripe accounts.
@@ -63,14 +63,14 @@ export default function ContactPage() {
             {contactRows.map((row) => {
               const Icon = row.icon;
               return (
-                <div className="rounded-lg bg-ivory px-4 py-4 ring-1 ring-ink/10" key={row.label}>
+                <div className="border-t border-white/15 py-4" key={row.label}>
                   <div className="flex items-center gap-3">
-                    <Icon aria-hidden className="h-4 w-4 text-champagne" />
+                    <Icon aria-hidden className="h-4 w-4 text-soft-gold" />
                     <div>
-                      <div className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">
+                      <div className="text-sm font-semibold text-white/50">
                         {row.label}
                       </div>
-                      <div className="mt-1 font-semibold text-ink">{row.value}</div>
+                      <div className="mt-1 font-semibold text-white">{row.value}</div>
                     </div>
                   </div>
                 </div>
@@ -101,7 +101,7 @@ export default function ContactPage() {
         />
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {contentGaps.map((item) => (
-            <div className="rounded-lg border border-ink/10 bg-white px-5 py-4 text-neutral-700 shadow-sm" key={item}>
+            <div className="border-t border-ink/10 py-4 text-neutral-700" key={item}>
               {item}
             </div>
           ))}

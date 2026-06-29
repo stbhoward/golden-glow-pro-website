@@ -5,7 +5,6 @@ import Link from "next/link";
 
 import { ButtonLink } from "@/components/ui/button-link";
 import { CTABand } from "@/components/ui/cta-band";
-import { SectionIntro } from "@/components/ui/section-intro";
 import { homeFaqLinks } from "@/data/faqs";
 import { brandPillars, siteConfig, trustSignals } from "@/data/site";
 import { serviceCards } from "@/data/services";
@@ -28,119 +27,158 @@ export default function HomePage() {
           sizes="100vw"
           src={siteConfig.heroImage}
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/75 to-ink/20" />
-        <div className="mx-auto grid min-h-[680px] max-w-7xl items-center px-6 py-24">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-soft-gold backdrop-blur">
-              <Sparkles aria-hidden className="h-4 w-4" />
-              Houston Luxury Home Cleaning
-            </div>
-            <h1 className="mt-6 font-serif text-6xl leading-tight tracking-normal md:text-8xl">
-              Golden Glow Pro
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/78 to-ink/30" />
+        <div className="mx-auto grid min-h-[760px] max-w-7xl content-center px-6 py-28">
+          <div className="max-w-4xl">
+            <p className="text-sm font-semibold text-soft-gold">Houston luxury home cleaning</p>
+            <h1 className="mt-5 max-w-4xl text-6xl font-semibold leading-tight md:text-8xl">
+              A quieter standard of clean for refined homes.
             </h1>
-            <p className="mt-6 max-w-2xl text-xl leading-8 text-white/80 md:text-2xl">
-              A higher standard of clean for Houston homes, apartments, high-rises,
-              penthouses, and luxury residences.
+            <p className="mt-7 max-w-2xl text-xl leading-8 text-white/78">
+              Golden Glow Pro cares for homes, apartments, high-rises, penthouses,
+              and luxury residences with polish, discretion, and dependable detail.
             </p>
-            <p className="mt-5 max-w-2xl leading-8 text-white/70">
-              From Premier Refresh Cleaning and recurring care to deep cleaning and
-              move-in or move-out support, each visit is delivered with
-              professionalism, discretion, and attention to detail.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <ButtonLink href="/booking" icon={CalendarCheck} variant="gold">
-                Book Now
+            <div className="mt-9 flex flex-wrap gap-3">
+              <ButtonLink href={siteConfig.bookingUrl} icon={CalendarCheck} variant="gold">
+                Book a Cleaning
               </ButtonLink>
-              <ButtonLink href="/membership" icon={Gem} variant="light">
-                View Membership
+              <ButtonLink href="/services" icon={Sparkles} variant="light">
+                Explore Services
               </ButtonLink>
             </div>
           </div>
         </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 py-8">
-        <div className="grid gap-4 md:grid-cols-4">
-          {trustSignals.map((item) => (
-            <div
-              className="rounded-lg border border-ink/10 bg-white px-5 py-4 text-center text-sm font-semibold text-neutral-700 shadow-sm"
-              key={item}
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[0.9fr_1.1fr]">
-        <SectionIntro
-          body="Golden Glow Cleaning Services is built around more than basic cleaning. The business is positioned to deliver a polished experience through reliability, strong communication, attention to detail, eco-friendly product preferences, and service options that fit the rhythm of modern Houston households."
-          eyebrow="Why Golden Glow"
-          title="Luxury-forward service with everyday dependability"
-        />
-        <div className="grid gap-4 sm:grid-cols-2">
-          {brandPillars.map((item) => (
-            <article className="rounded-lg border border-ink/10 bg-white p-5 shadow-sm" key={item}>
-              <Sparkles aria-hidden className="h-5 w-5 text-champagne" />
-              <p className="mt-4 leading-7 text-neutral-700">{item}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="border-y border-ink/10 bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-20">
-          <SectionIntro
-            body="These core services anchor the first production structure. Each one can later connect to service selection, add-ons, account creation, deposit payment, and scheduling."
-            eyebrow="Signature services"
-            title="Choose the cleaning service that best fits your home"
-          />
-          <div className="mt-10 grid gap-5 lg:grid-cols-4">
-            {serviceCards.map((service) => (
-              <Link
-                className="group rounded-lg border border-ink/10 bg-ivory p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-glow"
-                href="/services"
-                key={service.id}
-              >
-                <h3 className="font-serif text-2xl leading-tight tracking-normal text-ink">
-                  {service.title}
-                </h3>
-                <p className="mt-4 text-sm leading-6 text-neutral-600">{service.subtitle}</p>
-                <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-champagne">
-                  Explore service <ArrowRight aria-hidden className="h-4 w-4" />
-                </div>
-              </Link>
+        <div className="border-t border-white/15 bg-ink/72 backdrop-blur">
+          <div className="mx-auto grid max-w-7xl gap-6 px-6 py-6 md:grid-cols-4">
+            {trustSignals.map((item) => (
+              <div className="text-sm text-white/76" key={item}>
+                {item}
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <SectionIntro
-          body="The homepage FAQ acts like a shortcut area for common questions. Each answer helps the visitor quickly decide where to go next."
-          eyebrow="Home FAQ"
-          title="Quick answers before you take the next step"
-        />
-        <div className="mt-10 grid gap-6 lg:grid-cols-2">
-          {homeFaqLinks.map((item) => (
-            <article className="rounded-lg border border-ink/10 bg-white p-7 shadow-sm" key={item.question}>
-              <h3 className="font-serif text-2xl leading-tight tracking-normal text-ink">
-                {item.question}
-              </h3>
-              <p className="mt-4 leading-7 text-neutral-700">{item.answer}</p>
-              <ButtonLink className="mt-6" href={item.href} icon={ArrowRight}>
-                {item.cta}
-              </ButtonLink>
-            </article>
-          ))}
+      <section className="section-rule mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[0.85fr_1.15fr]">
+        <div>
+          <p className="text-sm font-semibold text-bronze">Residential-first</p>
+          <h2 className="mt-4 max-w-xl text-5xl font-semibold leading-tight text-ink">
+            Built for homes that deserve more than a basic clean.
+          </h2>
+        </div>
+        <div className="grid gap-8">
+          <p className="max-w-3xl text-xl leading-9 text-neutral-700">
+            Golden Glow Cleaning Services is positioned around reliability, strong
+            communication, attention to detail, eco-friendly product preferences,
+            and service options that fit the rhythm of modern Houston households.
+          </p>
+          <div className="grid gap-4 md:grid-cols-2">
+            {brandPillars.map((item) => (
+              <div className="border-t border-ink/12 pt-4 leading-7 text-neutral-700" key={item}>
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-porcelain">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="relative min-h-[620px] overflow-hidden">
+            <Image
+              alt="Elegant living room maintained by Golden Glow Pro"
+              className="h-full w-full object-cover"
+              fill
+              sizes="(min-width: 1024px) 52vw, 100vw"
+              src={siteConfig.membershipImage}
+            />
+          </div>
+          <div className="flex flex-col justify-center">
+            <p className="text-sm font-semibold text-bronze">Signature services</p>
+            <h2 className="mt-4 text-5xl font-semibold leading-tight text-ink">
+              A service menu shaped around real residential life.
+            </h2>
+            <div className="mt-10 border-t border-ink/10">
+              {serviceCards.map((service) => (
+                <Link
+                  className="group grid gap-5 border-b border-ink/10 py-6 md:grid-cols-[0.8fr_1fr]"
+                  href="/services"
+                  key={service.id}
+                >
+                  <div>
+                    <h3 className="text-2xl font-semibold text-ink">{service.title}</h3>
+                    <p className="mt-2 text-sm font-semibold text-bronze">{service.price}</p>
+                  </div>
+                  <div className="flex gap-4">
+                    <p className="leading-7 text-neutral-700">{service.subtitle}</p>
+                    <ArrowRight
+                      aria-hidden
+                      className="mt-1 h-5 w-5 shrink-0 text-champagne transition group-hover:translate-x-1"
+                    />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-rule mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[0.95fr_1.05fr]">
+        <div>
+          <p className="text-sm font-semibold text-bronze">Membership</p>
+          <h2 className="mt-4 max-w-2xl text-5xl font-semibold leading-tight text-ink">
+            Consistent home care with priority, flexibility, and calm built in.
+          </h2>
+        </div>
+        <div>
+          <p className="text-xl leading-9 text-neutral-700">
+            Membership turns cleaning from something reactive into something
+            proactive. It is for busy professionals, families, frequent hosts, and
+            anyone who wants a beautifully maintained space without constantly
+            catching up.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <ButtonLink href="/membership" icon={Gem} variant="dark">
+              View Membership
+            </ButtonLink>
+            <ButtonLink href={siteConfig.bookingUrl} icon={CalendarCheck} variant="outline">
+              Start Booking
+            </ButtonLink>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-ink text-white">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="text-sm font-semibold text-soft-gold">Client questions</p>
+            <h2 className="mt-4 text-5xl font-semibold leading-tight">
+              Clear answers before the next step.
+            </h2>
+          </div>
+          <div className="border-t border-white/15">
+            {homeFaqLinks.map((item) => (
+              <article className="border-b border-white/15 py-7" key={item.question}>
+                <h3 className="text-2xl font-semibold">{item.question}</h3>
+                <p className="mt-3 leading-7 text-white/68">{item.answer}</p>
+                <Link
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-soft-gold"
+                  href={item.href}
+                >
+                  {item.cta}
+                  <ArrowRight aria-hidden className="h-4 w-4" />
+                </Link>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
       <CTABand
-        body="Start with service selection and keep the path clean through account creation, deposit, scheduling, and confirmation as integrations are added."
-        primary={{ label: "View Services", href: "/services", icon: Sparkles }}
-        secondary={{ label: "Book Now", href: "/booking", icon: CalendarCheck }}
-        title="A refined structure for premium home care"
+        body="Start with the service that fits your home. The deeper payment, account, and scheduling integrations stay intentionally deferred until the next phase."
+        primary={{ label: "Book a Cleaning", href: siteConfig.bookingUrl, icon: CalendarCheck }}
+        secondary={{ label: "Explore Services", href: "/services", icon: Sparkles }}
+        title="Bring the Golden Glow standard into your home."
       />
     </>
   );

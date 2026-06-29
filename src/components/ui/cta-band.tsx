@@ -22,10 +22,10 @@ type CTABandProps = {
 export function CTABand({ title, body, primary, secondary }: CTABandProps) {
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
-      <div className="overflow-hidden rounded-lg bg-ink text-white shadow-glow">
-        <div className="grid items-center gap-8 px-6 py-10 md:px-10 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="overflow-hidden border-y border-ink/10 bg-ink text-white">
+        <div className="grid items-center gap-8 px-6 py-12 md:px-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <h2 className="font-serif text-3xl leading-tight tracking-normal md:text-4xl">
+            <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
               {title}
             </h2>
             <p className="mt-4 text-base leading-8 text-white/70 md:text-lg">{body}</p>

@@ -1,12 +1,12 @@
 import { CalendarCheck, CreditCard, Gem } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 import { ButtonLink } from "@/components/ui/button-link";
 import { CheckList } from "@/components/ui/check-list";
 import { CTABand } from "@/components/ui/cta-band";
 import { FAQSection } from "@/components/ui/faq-section";
 import { PageHero } from "@/components/ui/page-hero";
-import { SectionIntro } from "@/components/ui/section-intro";
 import { faqSections } from "@/data/faqs";
 import { membershipBenefits, membershipOutcomes, membershipPlans } from "@/data/membership";
 import { siteConfig } from "@/data/site";
@@ -21,64 +21,93 @@ export default function MembershipPage() {
   return (
     <>
       <PageHero
-        body="Our Membership is designed for clients who want more than an occasional cleaning: consistency, convenience, and peace of mind that the home is always cared for."
+        body="For clients who value consistency, convenience, and the peace of mind that their home is always being cared for."
         eyebrow="Membership"
         imageSrc={siteConfig.membershipImage}
-        title="Elevated home care, designed for your lifestyle"
+        title="Home care that feels planned, calm, and beautifully maintained."
       />
 
-      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[0.95fr_1.05fr]">
+      <section className="section-rule mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <SectionIntro
-            body="When your home is cared for on a regular basis, it stays in better condition overall. Cleanings become more efficient, buildup is reduced, and your space remains consistently fresh and inviting."
-            eyebrow="Why choose Membership"
-            title="A dependable, long-term solution for maintaining your home"
-          />
+          <p className="text-sm font-semibold text-bronze">Why choose Membership</p>
+          <h2 className="mt-4 text-5xl font-semibold leading-tight text-ink">
+            Cleaning becomes lighter when it is no longer reactive.
+          </h2>
+        </div>
+        <div>
+          <p className="text-xl leading-9 text-neutral-700">
+            When your home is cared for on a regular basis, it stays in better
+            condition overall. Cleanings become more efficient, buildup is reduced,
+            and your space remains consistently fresh and inviting.
+          </p>
           <p className="mt-6 leading-8 text-neutral-700">
             For busy professionals, families, frequent hosts, and anyone who values a
             beautifully kept space, Membership offers a smarter and more convenient
             way to enjoy a consistently clean home.
           </p>
         </div>
-        <div className="rounded-lg bg-ink p-8 text-white shadow-glow md:p-10">
-          <Gem aria-hidden className="h-7 w-7 text-soft-gold" />
-          <h2 className="mt-5 font-serif text-3xl leading-tight tracking-normal">
-            Why a homeowner would buy it
-          </h2>
-          <p className="mt-5 text-lg leading-8 text-white/70">
-            The value comes from savings, convenience, preferred treatment, and the
-            confidence of knowing home care is easier to manage over time. It should
-            feel like a smarter homeowner decision, not a pressured subscription.
-          </p>
+      </section>
+
+      <section className="bg-porcelain">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="relative min-h-[600px] overflow-hidden shadow-soft">
+            <Image
+              alt="Luxury living room maintained through Golden Glow Pro Membership"
+              className="h-full w-full object-cover"
+              fill
+              sizes="(min-width: 1024px) 52vw, 100vw"
+              src={siteConfig.membershipImage}
+            />
+          </div>
+          <div className="flex flex-col justify-center">
+            <p className="text-sm font-semibold text-bronze">Membership value</p>
+            <h2 className="mt-4 text-5xl font-semibold leading-tight text-ink">
+              Preferred care for clients who want the home to stay ready.
+            </h2>
+            <div className="mt-10 border-t border-ink/10">
+              {membershipBenefits.map((item) => (
+                <div className="border-b border-ink/10 py-5 text-lg text-neutral-700" key={item}>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="border-y border-ink/10 bg-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[0.9fr_1.1fr]">
-          <SectionIntro
-            body="Our Standard Membership is available for $49 per month. Weekly recurring cleaning clients receive complimentary Membership at no additional cost."
-            eyebrow="Membership pricing"
-            title="A premium service advantage with simple, clear value"
-          />
-          <div className="grid gap-6">
+      <section className="mx-auto max-w-7xl px-6 py-24">
+        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="text-sm font-semibold text-bronze">Membership pricing</p>
+            <h2 className="mt-4 text-5xl font-semibold leading-tight text-ink">
+              Simple monthly value, with weekly clients rewarded.
+            </h2>
+          </div>
+          <div className="border-t border-ink/10">
             {membershipPlans.map((plan) => (
-              <article className="rounded-lg bg-ivory p-7 ring-1 ring-ink/10" key={plan.name}>
-                <h2 className="font-serif text-3xl tracking-normal text-ink">{plan.name}</h2>
-                <div className="mt-3 text-2xl font-semibold text-champagne">{plan.price}</div>
-                <p className="mt-4 leading-7 text-neutral-700">{plan.bestFor}</p>
-                <div className="mt-6">
-                  <CheckList items={plan.benefits} />
-                </div>
-                <div className="mt-6 rounded-lg border border-ink/10 bg-white px-5 py-4 text-neutral-700">
-                  {plan.note}
-                </div>
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <ButtonLink href="/booking" icon={CalendarCheck}>
-                    Book Now
-                  </ButtonLink>
-                  <ButtonLink href="/booking" icon={CreditCard} variant="outline">
-                    Deposit Step
-                  </ButtonLink>
+              <article className="border-b border-ink/10 py-8" key={plan.name}>
+                <div className="grid gap-8 md:grid-cols-[0.35fr_0.65fr]">
+                  <div>
+                    <h3 className="text-3xl font-semibold text-ink">{plan.name}</h3>
+                    <div className="mt-3 text-3xl font-semibold text-bronze">{plan.price}</div>
+                  </div>
+                  <div>
+                    <p className="leading-8 text-neutral-700">{plan.bestFor}</p>
+                    <div className="mt-6">
+                      <CheckList items={plan.benefits} />
+                    </div>
+                    <p className="mt-6 border-l-2 border-champagne pl-5 leading-7 text-neutral-700">
+                      {plan.note}
+                    </p>
+                    <div className="mt-7 flex flex-wrap gap-3">
+                      <ButtonLink href={siteConfig.bookingUrl} icon={CalendarCheck}>
+                        Book Now
+                      </ButtonLink>
+                      <ButtonLink href={siteConfig.stripeDepositUrl} icon={CreditCard} variant="outline">
+                        Deposit Placeholder
+                      </ButtonLink>
+                    </div>
+                  </div>
                 </div>
               </article>
             ))}
@@ -86,23 +115,21 @@ export default function MembershipPage() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-2">
-        <div>
-          <SectionIntro
-            body="A home that is cleaned regularly feels lighter, calmer, and more comfortable to live in. Membership turns cleaning from something reactive into something proactive."
-            eyebrow="A better way to maintain your home"
-            title="Home care that stays ahead of life"
-          />
-          <div className="mt-8">
-            <CheckList items={membershipBenefits} />
+      <section className="bg-ink text-white">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[0.82fr_1.18fr]">
+          <div>
+            <p className="text-sm font-semibold text-soft-gold">A better rhythm</p>
+            <h2 className="mt-4 text-5xl font-semibold leading-tight">
+              The home stays ahead of the week.
+            </h2>
           </div>
-        </div>
-        <div className="grid gap-4">
-          {membershipOutcomes.map((item) => (
-            <div className="rounded-lg border border-ink/10 bg-white px-5 py-4 text-neutral-700 shadow-sm" key={item}>
-              {item}
-            </div>
-          ))}
+          <div className="grid gap-x-10 gap-y-7 md:grid-cols-2">
+            {membershipOutcomes.map((item) => (
+              <div className="border-t border-white/15 pt-5 leading-7 text-white/72" key={item}>
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -116,7 +143,7 @@ export default function MembershipPage() {
 
       <CTABand
         body="Join our Membership for $49 per month, or enjoy complimentary Membership with weekly recurring service."
-        primary={{ label: "Book Now", href: "/booking", icon: CalendarCheck }}
+        primary={{ label: "Book Now", href: siteConfig.bookingUrl, icon: CalendarCheck }}
         secondary={{ label: "View Services", href: "/services", icon: Gem }}
         title="Experience a higher standard of home care"
       />
