@@ -1,10 +1,17 @@
 import { CalendarDays, CreditCard, Home, Sparkles, UserRound } from "lucide-react";
+import type { Metadata } from "next";
 
 import { IntegrationStatus } from "@/components/integrations/integration-status";
 import { CheckList } from "@/components/ui/check-list";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionIntro } from "@/components/ui/section-intro";
 import { siteConfig } from "@/data/site";
+
+export const metadata: Metadata = {
+  title: "Customer Account",
+  description:
+    "Customer account shell for future Golden Glow Pro profile details, property information, selected services, deposits, and appointment history."
+};
 
 const accountSections = [
   {

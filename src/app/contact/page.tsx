@@ -1,4 +1,5 @@
 import { CalendarCheck, Mail, MapPin, Phone } from "lucide-react";
+import type { Metadata } from "next";
 
 import { ButtonLink } from "@/components/ui/button-link";
 import { CTABand } from "@/components/ui/cta-band";
@@ -7,6 +8,12 @@ import { PageHero } from "@/components/ui/page-hero";
 import { SectionIntro } from "@/components/ui/section-intro";
 import { contentGaps, siteConfig } from "@/data/site";
 import { faqSections } from "@/data/faqs";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Contact Golden Glow Pro to ask about premium residential cleaning, service areas, booking, membership, and cleaning options for Houston homes."
+};
 
 const contactRows = [
   { label: "Phone", value: siteConfig.phone, icon: Phone },

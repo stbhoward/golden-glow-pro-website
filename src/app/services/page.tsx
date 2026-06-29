@@ -1,4 +1,5 @@
 import { CalendarCheck, PlusCircle, Sparkles } from "lucide-react";
+import type { Metadata } from "next";
 import Image from "next/image";
 
 import { ButtonLink } from "@/components/ui/button-link";
@@ -10,6 +11,12 @@ import { SectionIntro } from "@/components/ui/section-intro";
 import { faqSections } from "@/data/faqs";
 import { siteConfig } from "@/data/site";
 import { addOns, propertyTypes, serviceCards } from "@/data/services";
+
+export const metadata: Metadata = {
+  title: "Cleaning Services",
+  description:
+    "Explore Golden Glow Pro residential cleaning services, recurring cleaning, deep cleaning, move-in and move-out cleaning, commercial cleaning, Airbnb cleaning, and detail add-ons."
+};
 
 export default function ServicesPage() {
   return (

@@ -1,4 +1,5 @@
 import { CalendarCheck, CreditCard, Gem } from "lucide-react";
+import type { Metadata } from "next";
 
 import { ButtonLink } from "@/components/ui/button-link";
 import { CheckList } from "@/components/ui/check-list";
@@ -9,6 +10,12 @@ import { SectionIntro } from "@/components/ui/section-intro";
 import { faqSections } from "@/data/faqs";
 import { membershipBenefits, membershipOutcomes, membershipPlans } from "@/data/membership";
 import { siteConfig } from "@/data/site";
+
+export const metadata: Metadata = {
+  title: "Membership",
+  description:
+    "Learn about Golden Glow Pro Membership, a premium recurring home care program with priority scheduling, preferred rescheduling, exclusive member pricing, and ongoing value."
+};
 
 export default function MembershipPage() {
   return (

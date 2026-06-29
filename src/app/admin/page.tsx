@@ -1,10 +1,17 @@
 import { CalendarDays, CreditCard, ListChecks, ShieldCheck, UsersRound } from "lucide-react";
+import type { Metadata } from "next";
 
 import { IntegrationStatus } from "@/components/integrations/integration-status";
 import { CheckList } from "@/components/ui/check-list";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionIntro } from "@/components/ui/section-intro";
 import { siteConfig } from "@/data/site";
+
+export const metadata: Metadata = {
+  title: "Admin",
+  description:
+    "Admin shell prepared for future Golden Glow Pro booking visibility, customer details, deposit status, payment status, and appointment management."
+};
 
 const adminSections = [
   {

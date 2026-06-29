@@ -1,4 +1,5 @@
 import { CalendarCheck, UserPlus } from "lucide-react";
+import type { Metadata } from "next";
 
 import { IntegrationStatus } from "@/components/integrations/integration-status";
 import { ButtonLink } from "@/components/ui/button-link";
@@ -6,6 +7,12 @@ import { CheckList } from "@/components/ui/check-list";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionIntro } from "@/components/ui/section-intro";
 import { siteConfig } from "@/data/site";
+
+export const metadata: Metadata = {
+  title: "Sign Up",
+  description:
+    "Create-account route prepared for future Golden Glow Pro customer profiles, service selections, add-ons, and property details."
+};
 
 const accountFields = [
   "Name",

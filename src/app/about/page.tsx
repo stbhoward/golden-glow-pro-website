@@ -1,4 +1,5 @@
 import { CalendarCheck, ShieldCheck, Sparkles } from "lucide-react";
+import type { Metadata } from "next";
 
 import { CTABand } from "@/components/ui/cta-band";
 import { FAQSection } from "@/components/ui/faq-section";
@@ -6,6 +7,12 @@ import { PageHero } from "@/components/ui/page-hero";
 import { SectionIntro } from "@/components/ui/section-intro";
 import { faqSections } from "@/data/faqs";
 import { brandPillars, siteConfig } from "@/data/site";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Meet Golden Glow Pro, a premium Houston cleaning company built around professionalism, consistency, eco-conscious care, and luxury residential service."
+};
 
 export default function AboutPage() {
   return (

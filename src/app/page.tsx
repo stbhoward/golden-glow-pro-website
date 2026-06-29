@@ -1,4 +1,5 @@
 import { ArrowRight, CalendarCheck, Gem, Sparkles } from "lucide-react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,6 +9,12 @@ import { SectionIntro } from "@/components/ui/section-intro";
 import { homeFaqLinks } from "@/data/faqs";
 import { brandPillars, siteConfig, trustSignals } from "@/data/site";
 import { serviceCards } from "@/data/services";
+
+export const metadata: Metadata = {
+  title: "Houston Luxury Home Cleaning",
+  description:
+    "Golden Glow Pro provides elevated residential cleaning, recurring home care, deep cleaning, and move-in or move-out service for Houston homes and luxury residences."
+};
 
 export default function HomePage() {
   return (

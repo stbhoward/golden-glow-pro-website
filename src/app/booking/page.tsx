@@ -1,4 +1,5 @@
 import { CalendarCheck, CreditCard, Home, ShieldCheck, Sparkles, UserRound } from "lucide-react";
+import type { Metadata } from "next";
 
 import { IntegrationStatus } from "@/components/integrations/integration-status";
 import { ButtonLink } from "@/components/ui/button-link";
@@ -7,6 +8,12 @@ import { PageHero } from "@/components/ui/page-hero";
 import { SectionIntro } from "@/components/ui/section-intro";
 import { bookingFlow, siteConfig } from "@/data/site";
 import { addOns, serviceCards } from "@/data/services";
+
+export const metadata: Metadata = {
+  title: "Booking",
+  description:
+    "Start the Golden Glow Pro booking flow for service selection, add-ons, property details, account setup, deposit preparation, and future appointment scheduling."
+};
 
 const collectionGroups = [
   {

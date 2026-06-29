@@ -63,7 +63,7 @@ export function SiteHeader() {
           <ButtonLink href="/sign-in" icon={UserRound} variant="outline">
             Sign In
           </ButtonLink>
-          <ButtonLink href="/booking" icon={CalendarCheck} variant="dark">
+          <ButtonLink href={siteConfig.bookingUrl} icon={CalendarCheck} variant="dark">
             Book Now
           </ButtonLink>
         </div>

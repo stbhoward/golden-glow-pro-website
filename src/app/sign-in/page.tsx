@@ -1,10 +1,17 @@
 import { LogIn, ShieldCheck } from "lucide-react";
+import type { Metadata } from "next";
 
 import { IntegrationStatus } from "@/components/integrations/integration-status";
 import { ButtonLink } from "@/components/ui/button-link";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionIntro } from "@/components/ui/section-intro";
 import { siteConfig } from "@/data/site";
+
+export const metadata: Metadata = {
+  title: "Sign In",
+  description:
+    "Sign in route prepared for future Golden Glow Pro customer account access through Supabase Auth."
+};
 
 export default function SignInPage() {
   return (
